@@ -1,6 +1,7 @@
 import express from "express";
 import routes from "./routes";
 import mongoose from "mongoose";
+import path from "path";
 
 class App {
 
@@ -18,6 +19,12 @@ class App {
   }
 
   middlewares() {
+    // cria uma nova rota "files" na minha middleware que direciona para a pasta uploads na raiz do projeto
+    this.server.use(
+      '/files',
+      express.static(path.resolve(__dirname, '..', 'uploads')) // sai da pasta src e vai para a raiz ao encontro da pasta uploads
+    );
+
     this.server.use(express.json());
   }
 

@@ -5,5 +5,5 @@ const UserSchema = new Schema({
     email: String,
 });
 
-// exporta o model de usuario com seu schema
+// exporta o model com seu schema
 export default model('User', UserSchema);

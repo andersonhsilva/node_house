@@ -1,6 +1,6 @@
 import User from "../models/User";
 
-// metodos: index, show, update, store, destroy
+// herda os metodos do model: index, show, update, store, destroy
 class SessionController {
 
     async store(req, res) {
