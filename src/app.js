@@ -9,11 +9,8 @@ class App {
     // cria uma variavel de atributo em js chamada server
     this.server = express();
 
-    mongoose.connect('mongodb+srv://andersonhsilva:VfbqHHMLWaDmo5MV@nodehouse.jclpofy.mongodb.net/?retryWrites=true&w=majority&appName=nodeHouse', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-
+    // conecta ao banco de dados mongodb que fica em nuvel de forma gratuita ate 500mb
+    mongoose.connect('mongodb+srv://andersonhsilva:VfbqHHMLWaDmo5MV@nodehouse.jclpofy.mongodb.net/?retryWrites=true&w=majority&appName=nodeHouse');
 
     // chama nossos metodos da class app
     this.middlewares();
